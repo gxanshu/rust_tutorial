@@ -1,16 +1,29 @@
 pub fn run() {
-    println!("Hello from print.rs file");
+  // Print to console
+  println!("Hello from the print.rs file");
 
-    println!("{}", 1);
+  // Basic Formatting
+  println!("{} is from {}", "Brad", "Mass");
 
-    println!("age is: {} and name is {}", 19, "Anshu");
+  // Positional Arguments
+  println!(
+    "{0} is from {1} and {0} likes to {2}",
+    "Brad", "Mass", "code"
+  );
 
-    // positiional indexing
-    println!("{name} is a good person", name = "anshu");
+  // Named Arguments
+  println!(
+    "{name} likes to play {activity}",
+    name = "John",
+    activity = "Baseball"
+  );
 
-    // binary indexing
-    println!("{:b}, {:x}, {:o}", 10, 10, 10);
+  // Placeholder traits
+  println!("Binary: {:b} Hex: {:x} Octal: {:o}", 10, 10, 10);
 
-    // debug traits
-    println!("{:?}", (12, true, "anshu"));
+  // Placeholder for debug trait
+  println!("{:?}", (12, true, "hello"));
+
+  // Basic math
+  println!("10 + 10 = {}", 10 + 10);
 }
